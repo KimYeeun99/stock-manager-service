@@ -1,0 +1,5 @@
+rootProject.name = 'stock-manager-service'
+
+include("adapter")
+include("application")
+include("domain")
