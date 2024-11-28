@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group = 'com.stock'
+group = 'com.out'
 version = '0.0.1-SNAPSHOT'
 
 repositories {
@@ -10,9 +10,11 @@ repositories {
 }
 
 dependencies {
-    implementation project(':domain') // domain 모듈 의존성
+    implementation project(":domain")
+    implementation project(":application")
 
-    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.mysql:mysql-connector-j'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

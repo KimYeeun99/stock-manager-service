@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: adapter-in
+
+  config:
+    import:
+      - application-out.yml
+
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+  metrics:
+    tags:
+      application: ${spring.application.name}
