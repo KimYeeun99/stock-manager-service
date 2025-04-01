@@ -1,0 +1,7 @@
+dependencies {
+    implementation project(':stock-input-http')
+}
+
+tasks.bootJar {
+    enabled = true
+}

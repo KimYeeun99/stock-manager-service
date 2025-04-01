@@ -1,0 +1,13 @@
+project(':stock-input-http') {
+    dependencies {
+
+    }
+
+    tasks.bootJar {
+        enabled = false
+    }
+
+    tasks.jar {
+        enabled = true
+    }
+}

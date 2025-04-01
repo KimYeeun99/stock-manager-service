@@ -1,0 +1,4 @@
+rootProject.name = 'stock-manager'
+
+include 'stock-bootstrap'
+include 'stock-input-http'
