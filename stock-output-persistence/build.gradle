@@ -1,0 +1,21 @@
+project(':stock-output-persistence:mysql') {
+    dependencies {
+//        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+//        runtimeOnly 'com.mysql:mysql-connector-j'
+    }
+}
+
+allprojects {
+    dependencies {
+        implementation project(':stock-common')
+        implementation project(':stock-application')
+    }
+
+    tasks.bootJar {
+        enabled = false
+    }
+
+    tasks.jar {
+        enabled = true
+    }
+}

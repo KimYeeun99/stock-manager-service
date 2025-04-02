@@ -1,0 +1,13 @@
+project(':stock-application') {
+    dependencies {
+        implementation project(':stock-common')
+    }
+
+    tasks.bootJar {
+        enabled = false
+    }
+
+    tasks.jar {
+        enabled = true
+    }
+}
