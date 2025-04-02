@@ -2,3 +2,7 @@ rootProject.name = 'stock-manager'
 
 include 'stock-bootstrap'
 include 'stock-input-http'
+include 'stock-application'
+include 'stock-output-persistence'
+include 'stock-output-persistence:mysql'
+include 'stock-common'

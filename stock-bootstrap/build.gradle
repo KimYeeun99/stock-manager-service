@@ -1,5 +1,8 @@
 dependencies {
     implementation project(':stock-input-http')
+    implementation project(':stock-output-persistence')
+    implementation project(':stock-output-persistence:mysql')
+    implementation project(':stock-common')
 }
 
 tasks.bootJar {

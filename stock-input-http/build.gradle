@@ -1,6 +1,7 @@
 project(':stock-input-http') {
     dependencies {
-
+        implementation project(":stock-application")
+        implementation project(":stock-common")
     }
 
     tasks.bootJar {
