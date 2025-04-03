@@ -1,31 +1,19 @@
 package com.stock.common.exception;
 
+import io.micrometer.common.util.StringUtils;
 import jakarta.validation.constraints.NotNull;
+import org.apache.logging.log4j.util.Strings;
 
 public class CommonException extends RuntimeException {
     @NotNull
     public final int statusCode;
     @NotNull
-    public final String defaultMessage;
+    public final String error;
+    private final String message;
 
-    public final String detailMessage;
-
-    public CommonException(int statusCode, String defaultMessage) {
-        this.statusCode = statusCode;
-        this.defaultMessage = defaultMessage;
-        this.detailMessage = "";
-    }
-
-    public CommonException(int statusCode, String defaultMessage, String detailMessage) {
-        this.statusCode = statusCode;
-        this.defaultMessage = defaultMessage;
-        this.detailMessage = detailMessage;
-    }
-
-    public String getMessage() {
-        if (this.defaultMessage.isEmpty()) {
-            return  "[" + defaultMessage + "] " + detailMessage;
-        }
-        return defaultMessage;
+    public CommonException(ExceptionCode exception) {
+        this.statusCode = exception.getStatusCode();
+        this.error = exception.getError();
+        this.message = StringUtils.isEmpty(exception.getMessage()) ? Strings.EMPTY : exception.getMessage();
     }
 }

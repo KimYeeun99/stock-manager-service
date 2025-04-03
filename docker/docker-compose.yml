@@ -1,0 +1,19 @@
+version: '3.8'  # Docker Compose 파일 버전
+
+services:
+  mysql:
+    image: mysql:8.0  # 사용할 MySQL 버전
+    container_name: stock-mysql  # 컨테이너 이름 지정
+    restart: always  # 컨테이너가 비정상 종료되면 자동 재시작
+    env_file:
+      - .env  # 환경 변수 파일 적용
+    ports:
+      - "${MYSQL_PORT}:3306"  # MySQL 기본 포트를 호스트와 연결 (로컬에서 접근 가능)
+    volumes:
+      - ../mysql_data:/var/lib/mysql  # MySQL 데이터를 로컬에 영구 저장
+    networks:
+      - spring_network  # Spring Boot와 같은 네트워크를 사용하여 연결 가능하게 함
+
+networks:
+  spring_network:  # 네트워크 설정 (Spring Boot와 같은 네트워크에서 실행)
+    driver: bridge

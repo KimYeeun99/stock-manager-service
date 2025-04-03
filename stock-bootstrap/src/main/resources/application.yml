@@ -1,0 +1,8 @@
+spring:
+  config:
+    import:
+      - classpath:mysql-config/application.yml
+  application:
+    name: "project"
+  messages:
+    encoding: UTF-8
