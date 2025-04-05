@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class CompanyService implements CompanyUseCase {
     private final CompanyPort companyPort;
     @Override
-    public CompanyResponse getCompany() {
-        return CompanyResponse.of(companyPort.findById(3L));
+    public CompanyResponse getCompany(Long id) {
+        return CompanyResponse.of(companyPort.findById(id));
     }
 }

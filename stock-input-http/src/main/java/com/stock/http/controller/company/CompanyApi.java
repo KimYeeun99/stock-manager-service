@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -15,18 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/company")
 public class CompanyApi {
     private final CompanyUseCase companyUseCase;
-    @GetMapping("")
-    public String testCode() {
-        return "test code";
-    }
 
-    @GetMapping("/test")
-    public CompanyResponse testResponse() {
-        return companyUseCase.getCompany();
-    }
-
-    @GetMapping("/me")
-    public ResponseEntity<CompanyResponse> entityTest() {
-        throw new CommonException(ExceptionCode.NOT_FOUND);
+    @GetMapping
+    public ResponseEntity<CompanyResponse> getCompanyInfo(@RequestParam Long id) {
+        return ResponseEntity.ok(companyUseCase.getCompany(id));
     }
 }
