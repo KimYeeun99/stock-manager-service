@@ -1,0 +1,25 @@
+-- 1. 법인(Company) 데이터 삽입
+INSERT INTO company (name)
+VALUES ('회사A'),
+       ('회사B');
+
+-- 2. 로그인 정보(Member Auth) 삽입
+INSERT INTO member_auth (email, password_hash, last_login)
+VALUES ('admin@companya.com', 'hashed_password_1', NOW()),
+       ('user1@companya.com', 'hashed_password_2', NULL),
+       ('admin@companyb.com', 'hashed_password_3', NOW()),
+       ('user1@companyb.com', 'hashed_password_4', NULL);
+
+-- 3. 회원(Member) 데이터 삽입
+INSERT INTO member (member_id, company_id, name, role, phone_number, status)
+VALUES (1, 1, '관리자A', 'ADMIN', '01012345678', 'ACTIVE'),
+       (2, 1, '사용자A1', 'USER', '01023456789', 'ACTIVE'),
+       (3, 2, '관리자B', 'ADMIN', '01034567890', 'ACTIVE'),
+       (4, 2, '사용자B1', 'USER', '01045678901', 'ACTIVE');
+
+-- 4. 상품(Product) 데이터 삽입
+INSERT INTO product (company_id, category_name, name, description, price, stock_quantity)
+VALUES (1, '전자기기', '스마트폰 A', '회사A의 최신 스마트폰', 999.99, 50),
+       (1, '전자기기', '태블릿 A', '회사A의 최신 태블릿', 599.99, 30),
+       (2, '생활가전', '청소기 B', '회사B의 무선 청소기', 299.99, 20),
+       (2, '주방가전', '전자레인지 B', '회사B의 전자레인지', 199.99, 25);
