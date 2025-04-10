@@ -1,7 +1,6 @@
 package com.stock.http.web.advice;
 
 import com.stock.common.exception.CommonException;
-import com.stock.common.exception.ExceptionCode;
 import lombok.AccessLevel;
 import lombok.Builder;
 

@@ -1,6 +1,5 @@
 package com.stock.mysql.persistence.entity.member;
 
-import com.stock.application.domain.company.Company;
 import com.stock.application.domain.member.LoginAuth;
 import com.stock.mysql.persistence.entity.BaseEntity;
 import jakarta.persistence.*;

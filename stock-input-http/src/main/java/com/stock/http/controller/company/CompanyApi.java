@@ -2,8 +2,6 @@ package com.stock.http.controller.company;
 
 import com.stock.application.port.in.company.CompanyUseCase;
 import com.stock.application.port.in.company.response.CompanyResponse;
-import com.stock.common.exception.CommonException;
-import com.stock.common.exception.ExceptionCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

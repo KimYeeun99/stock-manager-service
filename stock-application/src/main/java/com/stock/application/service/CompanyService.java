@@ -1,6 +1,5 @@
 package com.stock.application.service;
 
-import com.stock.application.domain.company.Company;
 import com.stock.application.port.in.company.CompanyUseCase;
 import com.stock.application.port.in.company.response.CompanyResponse;
 import com.stock.application.port.out.persistence.CompanyPort;

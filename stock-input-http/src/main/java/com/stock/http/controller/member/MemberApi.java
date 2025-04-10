@@ -1,6 +1,5 @@
 package com.stock.http.controller.member;
 
-import com.stock.application.port.in.company.response.CompanyResponse;
 import com.stock.application.port.in.member.MemberUseCase;
 import com.stock.application.port.in.member.reponse.LoginResponse;
 import lombok.RequiredArgsConstructor;
