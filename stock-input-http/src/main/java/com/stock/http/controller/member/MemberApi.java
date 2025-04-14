@@ -2,12 +2,10 @@ package com.stock.http.controller.member;
 
 import com.stock.application.port.in.member.MemberUseCase;
 import com.stock.application.port.in.member.reponse.LoginResponse;
+import com.stock.application.port.in.member.request.LoginRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -15,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MemberApi {
     private final MemberUseCase memberUseCase;
 
-    @GetMapping
-    public ResponseEntity<LoginResponse> doLogin(@RequestParam String email) {
-        return ResponseEntity.ok(memberUseCase.login(email));
+    @PostMapping
+    public ResponseEntity<LoginResponse> doLogin(@RequestBody LoginRequest request) {
+        return ResponseEntity.ok(memberUseCase.login(request.email()));
     }
 }

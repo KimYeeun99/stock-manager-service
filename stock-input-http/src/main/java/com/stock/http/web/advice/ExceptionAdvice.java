@@ -29,6 +29,11 @@ public class ExceptionAdvice {
                         exception.getMessage()));
     }
 
+    /**
+     * @Valid 유효성 검사 실패 예외 처리
+     * @param exception
+     * @return
+     */
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<ExceptionResponse> exception(MethodArgumentNotValidException exception) {
         return ResponseEntity

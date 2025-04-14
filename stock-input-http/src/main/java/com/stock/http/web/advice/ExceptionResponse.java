@@ -23,7 +23,7 @@ public record ExceptionResponse(
         return ExceptionResponse.builder()
                 .status(exception.statusCode)
                 .error(exception.error)
-                .message(exception.getMessage())
+                .message(exception.message)
                 .build();
 
     }

@@ -9,7 +9,7 @@ public class CommonException extends RuntimeException {
     public final int statusCode;
     @NotNull
     public final String error;
-    private final String message;
+    public final String message;
 
     public CommonException(ExceptionCode exception) {
         this.statusCode = exception.getStatusCode();

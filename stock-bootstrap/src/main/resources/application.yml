@@ -2,6 +2,7 @@ spring:
   config:
     import:
       - classpath:mysql-config/application.yml
+      - classpath:http-application.yml
   application:
     name: "project"
   messages:

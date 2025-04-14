@@ -1,5 +1,6 @@
 package com.stock.application.service;
 
+import com.stock.application.domain.member.LoginAuth;
 import com.stock.application.port.in.member.MemberUseCase;
 import com.stock.application.port.in.member.reponse.LoginResponse;
 import com.stock.application.port.out.persistence.MemberPort;

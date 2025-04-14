@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: stock-input-http
+
+jwt:
+  secret: 9N+7nE9CtGghV0FgBgAhB3W4eZjZrb90SDsVg6DPpQE=

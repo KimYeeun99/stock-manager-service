@@ -8,7 +8,7 @@ import lombok.RequiredArgsConstructor;
 public enum ExceptionCode {
     //4XX
     UNAUTHORIZED(401, "UNAUTHORIZED","유효하지 않은 토큰"),
-    NOT_FOUND(404, "NOT_FOUND", "존재하지 않음"),
+    NOT_FOUND(404, "NOT_FOUND", "존재하지 않는 정보"),
 
     //5XX
     INTERNAL_SERVER_ERROR(500, "NOT_FOUND", "서버 내부 오류"),
