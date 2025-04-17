@@ -3,6 +3,8 @@ dependencies {
     implementation project(':stock-output-persistence')
     implementation project(':stock-output-persistence:mysql')
     implementation project(':stock-common')
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
 }
 
 tasks.bootJar {

@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LoginService implements LoginUseCase {
     private final MemberPort memberPort;
-
     private final JwtTokenProvider jwtTokenProvider;
 
     /**

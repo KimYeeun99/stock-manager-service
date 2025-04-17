@@ -7,3 +7,9 @@ spring:
     name: "project"
   messages:
     encoding: UTF-8
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
